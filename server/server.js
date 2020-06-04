@@ -34,14 +34,14 @@ boot(app, __dirname, function(err) {
     app.start();
 });
 
-// console.log(Object.keys(app.models));
+console.log(Object.keys(app.models));
 
 // app.models.user.find((err, result) => {
 //   if (result.length === 0) {
 //     const user = {
-//       email: 'nick@nick.com',
-//       password: 'test',
-//       username: 'nick',
+//       email: 'ramkumar.singamsetty@gmail.com',
+//       password: 'Ram@12345',
+//       username: 'Ram',
 //     };
 
 //     app.models.user.create(user, (err, result) => {
@@ -50,57 +50,57 @@ boot(app, __dirname, function(err) {
 //   }
 // });
 
-app.models.user.afterRemote('create', (ctx, user, next) => {
-  console.log('New user is', user);
-  app.models.Profile.create({
-    first_name: user.username,
-    name: user.name,
-    created_at: new Date(),
-    userId: user.id,
-    role: 'subscriber',
-  }, (err, result) => {
-    if (!err && result) {
-      console.log('created New Profile', result);
-    } else {
-      console.log('There is an error', err);
-    }
-    next();
-  });
-});
+// app.models.user.afterRemote('create', (ctx, user, next) => {
+//   console.log('New user is', user);
+//   app.models.Profile.create({
+//     first_name: user.username,
+//     name: user.name,
+//     created_at: new Date(),
+//     userId: user.id,
+//     role: 'subscriber',
+//   }, (err, result) => {
+//     if (!err && result) {
+//       console.log('created New Profile', result);
+//     } else {
+//       console.log('There is an error', err);
+//     }
+//     next();
+//   });
+// });
 
-app.models.Role.find({where: {name: 'admin'}}, (err, role) => {
-  if (!err && role) {
-    console.log('no error, role is', role);
-    if (role.length === 0) {
-      app.models.Role.create({
-        name: 'admin',
-      }, (err2, result) => {
-        if (!err2 && result) {
-          app.models.user.findOne((usererr, user) => {
-            if (!usererr && user) {
-              result.principals.create({
-                principalType: app.models.RoleMapping.USER,
-                principalId: user.id,
-              }, (err3, principal) => {
-                console.log('Created Principal', err3, principal);
-              });
-            }
-          });
-        }
-      });
-    }
-  }
-});
+// app.models.Role.find({where: {name: 'admin'}}, (err, role) => {
+//   if (!err && role) {
+//     console.log('no error, role is', role);
+//     if (role.length === 0) {
+//       app.models.Role.create({
+//         name: 'admin',
+//       }, (err2, result) => {
+//         if (!err2 && result) {
+//           app.models.user.findOne((usererr, user) => {
+//             if (!usererr && user) {
+//               result.principals.create({
+//                 principalType: app.models.RoleMapping.USER,
+//                 principalId: user.id,
+//               }, (err3, principal) => {
+//                 console.log('Created Principal', err3, principal);
+//               });
+//             }
+//           });
+//         }
+//       });
+//     }
+//   }
+// });
 
-app.models.Role.find({where: {name: 'editor'}}, (err, roles) => {
-  if (!err && roles) {
-    if (roles.length === 0) {
-      app.models.Role.create({
-        name: 'editor',
-      }, (creationErr, result) => {
-        console.log(creationErr, result);
-      });
-    }
-  }
-});
+// app.models.Role.find({where: {name: 'editor'}}, (err, roles) => {
+//   if (!err && roles) {
+//     if (roles.length === 0) {
+//       app.models.Role.create({
+//         name: 'editor',
+//       }, (creationErr, result) => {
+//         console.log(creationErr, result);
+//       });
+//     }
+//   }
+// });
 
