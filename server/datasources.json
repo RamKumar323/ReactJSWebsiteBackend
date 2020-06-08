@@ -14,5 +14,16 @@
     "provider": "filesystem",
     "root": "./server/storage",
     "nameConflict": "makeUnique"
+  },
+  "backendwebsite": {
+    "host": "reglogin-muqmq.mongodb.net",
+    "port": 27017,
+    "url": "mongodb+srv://RamKumar323:Ram12345@reglogin-muqmq.mongodb.net/backendwebsite?retryWrites=true&w=majority",
+    "database": "mywebsite",
+    "password": "Ram12345",
+    "name": "backendwebsite",
+    "user": "RamKumar323",
+    "useNewUrlParser": true,
+    "connector": "mongodb"
   }
 }

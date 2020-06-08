@@ -14,38 +14,38 @@
     ]
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "backendwebsite",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
+    "dataSource": "backendwebsite",
     "public": false,
     "options": {
       "strictObjectIDCoercion": true
     }
   },
   "Role": {
-    "dataSource": "db",
+    "dataSource": "backendwebsite",
     "public": false
   },
   "Profile": {
-    "dataSource": "db",
+    "dataSource": "backendwebsite",
     "public": true
   },
   "user": {
-    "dataSource": "db",
+    "dataSource": "backendwebsite",
     "public": true
   },
   "CustomAccessToken": {
-    "dataSource": "db",
+    "dataSource": "backendwebsite",
     "public": true
   },
   "Post": {
-    "dataSource": "db",
+    "dataSource": "backendwebsite",
     "public": true
   },
   "Category": {
-    "dataSource": "db",
+    "dataSource": "backendwebsite",
     "public": true
   },
   "ImageFile": {
@@ -53,11 +53,11 @@
     "public": true
   },
   "PostImage": {
-    "dataSource": "db",
+    "dataSource": "backendwebsite",
     "public": true
   },
   "Comment": {
-    "dataSource": "db",
+    "dataSource": "backendwebsite",
     "public": true
   }
 }

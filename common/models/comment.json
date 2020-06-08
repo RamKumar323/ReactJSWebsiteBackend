@@ -21,9 +21,9 @@
       "foreignKey": "postId"
     },
     "Profile": {
-      "type":"belongsTo",
-      "model":"Profile",
-      "foreignKey":"profileId"
+      "type": "belongsTo",
+      "model": "Profile",
+      "foreignKey": "profileId"
     }
   },
   "acls": [],
