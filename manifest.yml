@@ -1,4 +1,0 @@
-applications:
-- name: reactjs-website
-  random-route: true
-  memory: 128M
