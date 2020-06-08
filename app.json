@@ -1,7 +1,7 @@
 {
-  "apps": [
+  "app": [
     {
-      "name": "demoapi1",
+      "name": "reactjs-website",
       "script": "./server/server.js",
       "instances": 2,
       "exec_mode": "cluster",
